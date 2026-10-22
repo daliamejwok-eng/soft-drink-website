@@ -1,0 +1,1528 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fffaf5;
+  color: #29222c;
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Fredoka", sans-serif;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: #ffffff;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ff4081;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ffad32;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #29222c;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #ff4081;
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 570px;
+  background: linear-gradient(120deg, #ff91bd, #ffbf8b);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.small-title {
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #a51d53;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 7vw, 100px);
+  line-height: 1;
+  color: white;
+}
+
+.hero h1 span {
+  color: #ffeb65;
+}
+
+.hero-description {
+  margin: 25px 0;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 450px;
+}
+
+.shop-btn {
+  display: inline-block;
+  background: #29222c;
+  color: white;
+  padding: 16px 35px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  background: #ff4081;
+  transform: translateY(-5px);
+}
+
+/* HERO IMAGE */
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.drink-circle img {
+  max-width: 85%;
+  max-height: 420px;
+  object-fit: contain;
+
+  filter: drop-shadow(15px 20px 12px rgba(0, 0, 0, 0.25));
+
+  animation: floatDrink 3s ease-in-out infinite;
+}
+
+@keyframes floatDrink {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-12deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(-8deg);
+  }
+}
+
+/* FLAVOURS */
+
+.flavours {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.flavours h2,
+.featured h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.flavour-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.flavour-card {
+  padding: 35px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #29222c;
+  transition: 0.3s;
+}
+
+.flavour-card:hover {
+  transform: translateY(-10px) rotate(2deg);
+}
+
+.flavour-card span {
+  font-size: 65px;
+}
+
+.flavour-card h3 {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.orange {
+  background: #ffd29b;
+}
+.pink {
+  background: #ffb4cf;
+}
+.purple {
+  background: #d8bcff;
+}
+.yellow {
+  background: #fff09a;
+}
+
+/* FEATURED PRODUCTS */
+
+.featured {
+  padding: 80px 8%;
+  text-align: center;
+  background: #fff0f5;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.product-card {
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px #ff408120;
+}
+
+.product-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  font-size: 24px;
+  margin: 15px 0 5px;
+}
+
+.product-card p {
+  color: #ff4081;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.product-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #ff4081;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* FOOTER */
+
+footer {
+  background: #29222c;
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+footer h2 {
+  color: #ff91bd;
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin-top: 10px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-description {
+    margin: 25px auto;
+  }
+
+  .drink-circle {
+    width: 260px;
+    height: 260px;
+  }
+
+  .flavour-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================= */
+/* PRODUCTS PAGE */
+/* ============================= */
+
+.products-banner {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(120deg, #ff91bd, #ffbf8b);
+}
+
+.products-banner h1 {
+  font-size: clamp(45px, 7vw, 85px);
+  color: white;
+  margin: 15px 0;
+}
+
+.products-banner p {
+  font-weight: 600;
+}
+
+.shop-section {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.shop-section h2 {
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+#searchDrink {
+  width: 100%;
+  max-width: 500px;
+  padding: 16px 25px;
+  border: 2px solid #ffd0e1;
+  border-radius: 30px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+#searchDrink:focus {
+  border-color: #ff4081;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0 45px;
+}
+
+.filter-buttons button {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: #ffe0eb;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+  background: #ff4081;
+  color: white;
+}
+
+.drinks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.drink-card {
+  background: var(--card-color);
+  border-radius: 25px;
+  padding: 25px 18px;
+  transition: 0.3s;
+}
+
+.drink-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px #00000015;
+}
+
+.drink-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  filter: drop-shadow(8px 12px 8px #00000030);
+  transition: 0.3s;
+}
+
+.drink-card:hover img {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.drink-card h3 {
+  margin: 18px 0 8px;
+  font-size: 21px;
+}
+
+.drink-card .price {
+  font-weight: 700;
+  color: #d72c65;
+  margin-bottom: 18px;
+}
+
+.drink-card button {
+  background: #29222c;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.drink-card button:hover {
+  background: #ff4081;
+}
+
+@media (max-width: 1000px) {
+  .drinks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .drinks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================
+   SHOPPING CART PAGE
+========================== */
+
+.cart-banner {
+  background: linear-gradient(120deg, #ff8fbd, #ffbd91);
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.cart-banner h1 {
+  font-size: 52px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.cart-banner p {
+  font-size: 20px;
+  color: #29212f;
+}
+
+.cart-section {
+  padding: 70px 8%;
+  background: #fff9f5;
+  min-height: 60vh;
+}
+
+.cart-section > h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 22px;
+  flex-wrap: wrap;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.cart-info {
+  flex: 1;
+  min-width: 160px;
+}
+
+.cart-info h3 {
+  margin-bottom: 10px;
+}
+
+.cart-info p {
+  color: #ff3980;
+  font-weight: bold;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.quantity-controls button {
+  border: none;
+  background: #ff3980;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.remove-btn {
+  border: none;
+  background: #29212f;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.cart-summary {
+  background: #ffe1ec;
+  padding: 35px;
+  border-radius: 25px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cart-summary h2 {
+  margin-bottom: 20px;
+}
+
+.cart-summary p {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.checkout-btn {
+  display: inline-block;
+  background: #ff3980;
+  color: white;
+  padding: 16px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.continue-shopping {
+  display: block;
+  margin-top: 20px;
+  color: #29212f;
+  text-decoration: none;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 50px;
+  font-size: 22px;
+}
+
+@media (max-width: 600px) {
+  .cart-banner h1 {
+    font-size: 36px;
+  }
+}
+
+/* ===== CHECKOUT PAGE ===== */
+
+.checkout-hero {
+  background: linear-gradient(120deg, #ff8fbd, #ffbd91);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.checkout-hero h1 {
+  font-size: 55px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.checkout-hero p {
+  font-size: 20px;
+  color: #29212f;
+}
+
+/* Checkout Layout */
+
+.checkout-section {
+  padding: 80px 8%;
+  background: #fff9f5;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* White Cards */
+
+.checkout-form,
+.checkout-summary {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.checkout-form h2,
+.checkout-summary h2 {
+  margin-bottom: 30px;
+  color: #29212f;
+}
+
+/* Form Styling */
+
+.checkout-form label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: bold;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ffd4e4;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus,
+.checkout-form select:focus {
+  border-color: #ff3481;
+}
+
+.checkout-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Place Order Button */
+
+.place-order-btn {
+  width: 100%;
+  padding: 18px;
+  margin-top: 30px;
+  background: #ff3481;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.place-order-btn:hover {
+  background: #29212f;
+  transform: translateY(-3px);
+}
+
+/* Order Summary */
+
+.checkout-summary {
+  height: fit-content;
+  background: #ffe3ee;
+}
+
+.checkout-summary h3 {
+  margin-top: 25px;
+  font-size: 24px;
+}
+
+.checkout-summary p {
+  margin-top: 25px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-hero h1 {
+    font-size: 36px;
+  }
+
+  .checkout-section {
+    padding: 40px 5%;
+  }
+
+  .checkout-form,
+  .checkout-summary {
+    padding: 25px;
+  }
+}
+
+/* ===== ABOUT US PAGE ===== */
+
+/* HERO SECTION */
+
+.about-hero {
+  background: linear-gradient(120deg, #ff8fbd, #ffbd91);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.about-hero h1 {
+  font-size: 55px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 21px;
+  color: #29212f;
+}
+
+/* OUR STORY */
+
+.about-story {
+  padding: 100px 8%;
+  background: #fff9f5;
+}
+
+.story-content {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.story-text h2 {
+  font-size: 42px;
+  color: #29212f;
+  margin-bottom: 25px;
+}
+
+.story-text p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.story-image {
+  background: #ffe1ec;
+  border-radius: 35px;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.story-image img {
+  width: 30%;
+  max-height: 230px;
+  object-fit: contain;
+  filter: drop-shadow(5px 15px 10px rgba(0, 0, 0, 0.2));
+  transition: 0.3s;
+}
+
+.story-image img:hover {
+  transform: translateY(-15px) rotate(5deg);
+}
+
+/* BUTTONS */
+
+.about-btn {
+  display: inline-block;
+  background: #ff3481;
+  color: white;
+  padding: 17px 35px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.about-btn:hover {
+  background: #29212f;
+  transform: translateY(-4px);
+}
+
+/* MISSION AND VISION */
+
+.about-values {
+  padding: 90px 8%;
+  text-align: center;
+  background: #fff0f6;
+}
+
+.about-values h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.about-values > p {
+  font-size: 19px;
+}
+
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 55px auto 0;
+}
+
+.value-card {
+  background: white;
+  padding: 45px 30px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.value-card:nth-child(1) {
+  background: #ffe0b5;
+}
+
+.value-card:nth-child(2) {
+  background: #d9f8bb;
+}
+
+.value-card:nth-child(3) {
+  background: #ffd1e5;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+}
+
+.value-icon {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.value-card h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.value-card p {
+  line-height: 1.8;
+}
+
+/* FINAL SECTION */
+
+.about-ending {
+  background: linear-gradient(120deg, #ff8fbd, #ffbd91);
+  text-align: center;
+  padding: 85px 20px;
+}
+
+.about-ending h2 {
+  font-size: 38px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.about-ending p {
+  font-size: 19px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 36px;
+  }
+
+  .story-content {
+    grid-template-columns: 1fr;
+  }
+
+  .values-container {
+    grid-template-columns: 1fr;
+  }
+
+  .story-text h2,
+  .about-values h2 {
+    font-size: 32px;
+  }
+
+  .about-ending h2 {
+    font-size: 30px;
+  }
+}
+
+/* ==========================
+   CONTACT US PAGE
+========================== */
+
+/* CONTACT HERO */
+
+.contact-hero {
+    background: linear-gradient(120deg, #ff8fbd, #ffbd91);
+    text-align: center;
+    padding: 95px 20px;
+}
+
+.contact-hero h1 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+    font-size: 19px;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* CONTACT LAYOUT */
+
+.contact-section {
+    padding: 90px 8%;
+    background: #fff9f5;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+}
+
+/* CONTACT INFORMATION */
+
+.contact-info h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.contact-info > p {
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.contact-info-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #ffe3ee;
+    padding: 22px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+}
+
+.contact-info-card:hover {
+    transform: translateX(8px);
+    background: #ffd1e3;
+}
+
+.contact-info-card span {
+    font-size: 32px;
+}
+
+.contact-info-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.contact-info-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* CONTACT FORM */
+
+.contact-form-box {
+    background: white;
+    padding: 45px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-form-box h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.contact-form-box label {
+    display: block;
+    font-weight: 600;
+    margin: 18px 0 8px;
+}
+
+.contact-form-box input,
+.contact-form-box select,
+.contact-form-box textarea {
+    width: 100%;
+    padding: 15px;
+
+    border: 2px solid #ffd4e4;
+    border-radius: 12px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+
+    outline: none;
+    background: white;
+}
+
+.contact-form-box input:focus,
+.contact-form-box select:focus,
+.contact-form-box textarea:focus {
+    border-color: #ff3481;
+}
+
+.contact-form-box textarea {
+    resize: vertical;
+}
+
+/* SEND MESSAGE BUTTON */
+
+.contact-submit {
+    width: 100%;
+    background: #ff3481;
+    color: white;
+
+    border: none;
+    border-radius: 35px;
+
+    padding: 17px;
+    margin-top: 25px;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-submit:hover {
+    background: #29212f;
+    transform: translateY(-4px);
+}
+
+#contactFeedback {
+    margin-top: 15px;
+    color: #207747;
+    font-weight: 600;
+}
+
+/* BOTTOM SECTION */
+
+.contact-ending {
+    text-align: center;
+    background: linear-gradient(120deg, #ff8fbd, #ffbd91);
+    padding: 80px 20px;
+}
+
+.contact-ending h2 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.contact-ending p {
+    font-size: 18px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero h1 {
+        font-size: 40px;
+    }
+
+    .contact-section {
+        padding: 50px 5%;
+    }
+
+    .contact-form-box {
+        padding: 25px;
+    }
+
+    .contact-ending h2 {
+        font-size: 30px;
+    }
+}
+
+/* ==========================
+   CONTACT US PAGE
+========================== */
+
+/* CONTACT HERO */
+
+.contact-hero {
+    background: linear-gradient(120deg, #ff8fbd, #ffbd91);
+    text-align: center;
+    padding: 95px 20px;
+}
+
+.contact-hero h1 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+    font-size: 19px;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* CONTACT LAYOUT */
+
+.contact-section {
+    padding: 90px 8%;
+    background: #fff9f5;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+}
+
+/* CONTACT INFORMATION */
+
+.contact-info h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.contact-info > p {
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.contact-info-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #ffe3ee;
+    padding: 22px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+}
+
+.contact-info-card:hover {
+    transform: translateX(8px);
+    background: #ffd1e3;
+}
+
+.contact-info-card span {
+    font-size: 32px;
+}
+
+.contact-info-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.contact-info-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* CONTACT FORM */
+
+.contact-form-box {
+    background: white;
+    padding: 45px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-form-box h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.contact-form-box label {
+    display: block;
+    font-weight: 600;
+    margin: 18px 0 8px;
+}
+
+.contact-form-box input,
+.contact-form-box select,
+.contact-form-box textarea {
+    width: 100%;
+    padding: 15px;
+
+    border: 2px solid #ffd4e4;
+    border-radius: 12px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+
+    outline: none;
+    background: white;
+}
+
+.contact-form-box input:focus,
+.contact-form-box select:focus,
+.contact-form-box textarea:focus {
+    border-color: #ff3481;
+}
+
+.contact-form-box textarea {
+    resize: vertical;
+}
+
+/* SEND MESSAGE BUTTON */
+
+.contact-submit {
+    width: 100%;
+    background: #ff3481;
+    color: white;
+
+    border: none;
+    border-radius: 35px;
+
+    padding: 17px;
+    margin-top: 25px;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-submit:hover {
+    background: #29212f;
+    transform: translateY(-4px);
+}
+
+#contactFeedback {
+    margin-top: 15px;
+    color: #207747;
+    font-weight: 600;
+}
+
+/* BOTTOM SECTION */
+
+.contact-ending {
+    text-align: center;
+    background: linear-gradient(120deg, #ff8fbd, #ffbd91);
+    padding: 80px 20px;
+}
+
+.contact-ending h2 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.contact-ending p {
+    font-size: 18px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero h1 {
+        font-size: 40px;
+    }
+
+    .contact-section {
+        padding: 50px 5%;
+    }
+
+    .contact-form-box {
+        padding: 25px;
+    }
+
+    .contact-ending h2 {
+        font-size: 30px;
+    }
+}
+
+/* ==========================
+   CONTACT US PAGE
+========================== */
+
+/* CONTACT HERO */
+
+.contact-hero {
+    background: linear-gradient(120deg, #ff8fbd, #ffbd91);
+    text-align: center;
+    padding: 95px 20px;
+}
+
+.contact-hero h1 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+    font-size: 19px;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* CONTACT LAYOUT */
+
+.contact-section {
+    padding: 90px 8%;
+    background: #fff9f5;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+}
+
+/* CONTACT INFORMATION */
+
+.contact-info h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.contact-info > p {
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.contact-info-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #ffe3ee;
+    padding: 22px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+}
+
+.contact-info-card:hover {
+    transform: translateX(8px);
+    background: #ffd1e3;
+}
+
+.contact-info-card span {
+    font-size: 32px;
+}
+
+.contact-info-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.contact-info-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* CONTACT FORM */
+
+.contact-form-box {
+    background: white;
+    padding: 45px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-form-box h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.contact-form-box label {
+    display: block;
+    font-weight: 600;
+    margin: 18px 0 8px;
+}
+
+.contact-form-box input,
+.contact-form-box select,
+.contact-form-box textarea {
+    width: 100%;
+    padding: 15px;
+
+    border: 2px solid #ffd4e4;
+    border-radius: 12px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+
+    outline: none;
+    background: white;
+}
+
+.contact-form-box input:focus,
+.contact-form-box select:focus,
+.contact-form-box textarea:focus {
+    border-color: #ff3481;
+}
+
+.contact-form-box textarea {
+    resize: vertical;
+}
+
+/* SEND MESSAGE BUTTON */
+
+.contact-submit {
+    width: 100%;
+    background: #ff3481;
+    color: white;
+
+    border: none;
+    border-radius: 35px;
+
+    padding: 17px;
+    margin-top: 25px;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-submit:hover {
+    background: #29212f;
+    transform: translateY(-4px);
+}
+
+#contactFeedback {
+    margin-top: 15px;
+    color: #207747;
+    font-weight: 600;
+}
+
+/* BOTTOM SECTION */
+
+.contact-ending {
+    text-align: center;
+    background: linear-gradient(120deg, #ff8fbd, #ffbd91);
+    padding: 80px 20px;
+}
+
+.contact-ending h2 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.contact-ending p {
+    font-size: 18px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero h1 {
+        font-size: 40px;
+    }
+
+    .contact-section {
+        padding: 50px 5%;
+    }
+
+    .contact-form-box {
+        padding: 25px;
+    }
+
+    .contact-ending h2 {
+        font-size: 30px;
+    }
+}

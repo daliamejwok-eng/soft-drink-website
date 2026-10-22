@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Drinks | POP & SIP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                POP<span>&</span>SIP 🥤
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- PRODUCTS BANNER -->
+    <section class="products-banner">
+        <p>WELCOME TO THE FLAVOUR PARTY ✨</p>
+        <h1>FIND YOUR FIZZ!</h1>
+        <p>Sweet, fruity, fizzy and totally refreshing.</p>
+    </section>
+
+    <!-- SEARCH AND FILTER -->
+    <section class="shop-section">
+
+        <h2>EXPLORE OUR DRINKS 🥤</h2>
+
+        <input
+            type="text"
+            id="searchDrink"
+            placeholder="Search your favourite drink..."
+        >
+
+        <div class="filter-buttons">
+            <button class="active" onclick="filterDrinks('all', this)">All Drinks</button>
+            <button onclick="filterDrinks('citrus', this)">🍊 Citrus</button>
+            <button onclick="filterDrinks('berry', this)">🍓 Berry</button>
+            <button onclick="filterDrinks('grape', this)">🍇 Grape</button>
+            <button onclick="filterDrinks('tropical', this)">🍍 Tropical</button>
+            <button onclick="filterDrinks('classic', this)">🥤 Classic</button>
+        </div>
+
+        <!-- JAVASCRIPT WILL DISPLAY OUR PRODUCTS HERE -->
+        <div class="drinks-grid" id="drinksContainer"></div>
+
+    </section>
+
+    <footer>
+        <h2>POP & SIP 🥤</h2>
+        <p>Bringing happiness, one sip at a time.</p>
+        <p>© 2026 POP & SIP. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
