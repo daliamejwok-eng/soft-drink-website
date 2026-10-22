@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart | POP & SIP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                POP<span>&</span>SIP 🥤
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CART BANNER -->
+    <section class="cart-banner">
+        <h1>YOUR HAPPY CART 🛒</h1>
+        <p>All your favourite drinks in one place!</p>
+    </section>
+
+    <!-- SHOPPING CART -->
+    <section class="cart-section">
+
+        <h2>YOUR DRINKS 🥤</h2>
+
+        <div id="cartContainer"></div>
+
+        <div class="cart-summary">
+            <h2>Order Summary</h2>
+
+            <p>Total:
+                <strong id="cartTotal">UGX 0</strong>
+            </p>
+
+            <a href="checkout.html" class="checkout-btn" id="checkoutBtn">
+                Proceed to Checkout →
+            </a>
+
+            <a href="products.html" class="continue-shopping">
+                ← Continue Shopping
+            </a>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

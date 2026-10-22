@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | POP & SIP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo"> POP<span>&</span>SIP 🥤 </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">🛒 Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="checkout-hero">
+      <h1>ALMOST THERE! 🥤</h1>
+      <p>Your happiness is just one sip away!</p>
+    </section>
+
+    <section class="checkout-section">
+      <div class="checkout-container">
+        <div class="checkout-form">
+          <h2>Delivery Details 💗</h2>
+
+          <form id="checkoutForm">
+            <label>Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              placeholder="Enter your full name"
+              required
+            />
+
+            <label>Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+
+            <label>Delivery Address</label>
+            <textarea
+              id="address"
+              placeholder="Enter your delivery location"
+              required
+            ></textarea>
+
+            <label>Payment Method</label>
+
+            <select id="payment" required>
+              <option value="">Select payment method</option>
+              <option value="MTN Mobile Money">MTN Mobile Money</option>
+              <option value="Airtel Money">Airtel Money</option>
+              <option value="Cash on Delivery">Cash on Delivery</option>
+            </select>
+
+            <button type="submit" class="place-order-btn">
+              Place My Order 🥤
+            </button>
+          </form>
+        </div>
+
+        <div class="checkout-summary">
+          <h2>Your Order 🛒</h2>
+
+          <div id="checkoutItems"></div>
+
+          <hr />
+
+          <h3>Total: <span id="checkoutTotal">UGX 0</span></h3>
+
+          <p>Thank you for shopping with POP & SIP! 💕</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
